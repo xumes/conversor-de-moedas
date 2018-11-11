@@ -11,17 +11,17 @@ const Formulario = props => {
             </div>
             <div className='row form-group'>
                 <div className='col-md-6'>
-                    <label for='formSelectDE'>De:</label>
-                    <ListaMoedas />
+                    <label htmlFor='formSelectDE'>De:</label>
+                    <ListaMoedas origem='de' />
                 </div>
 
                 <div className='col-md-6'>
-                    <label for='formSelectPARA'>Para:</label>
-                    <ListaMoedas />
+                    <label htmlFor='formSelectPARA'>Para:</label>
+                    <ListaMoedas origem='para' />
                 </div>
             </div>
             <div className='row'>
-                <button type="button" className="btn btn-primary btn-lg btn-block">Converter</button>
+                <button type="submit" className="btn btn-primary btn-lg btn-block">Converter</button>
             </div>
         </form>
     )
