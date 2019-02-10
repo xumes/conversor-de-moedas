@@ -9,21 +9,41 @@ class Formulario extends Component {
   constructor(props){
     super(props)
 
+    this.onValueChange = this.onValueChange.bind(this)
+    this.onValueDeChange = this.onValueDeChange.bind(this)
+    this.onValueParaChange = this.onValueParaChange.bind(this)
+    this.envia = this.envia.bind(this)
+
     this.state = {
-      converte: {}
+      de: '',
+      para: '',
+      valor:0
     }
   }
 
   onValueChange(e){
     console.log(e.target.value)
+    this.setState({valor: e.target.value})
   }
 
   onValueDeChange(e){
     console.log("DE:", e.target.value)
+    this.setState({de: e.target.value})
   }
 
   onValueParaChange(e){
     console.log("PARA:", e.target.value)
+    this.setState({para: e.target.value})
+  }
+
+  envia() {
+    const dados = {
+      de: this.state.de,
+      para: this.state.para,
+      valor: this.state.valor
+    }
+
+    this.props.converteMoedas(dados)
   }
 
   render() {
@@ -46,7 +66,7 @@ class Formulario extends Component {
           </div>
         </div>
         <div className="row">
-          <button type="submit" className="btn btn-primary btn-lg btn-block">
+          <button type="button" onClick={this.envia} className="btn btn-primary btn-lg btn-block">
             Converter
           </button>
         </div>

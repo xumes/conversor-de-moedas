@@ -14,7 +14,7 @@ const Conversor = props => {
                         <Formulario />
                     </div>
                     <div className='card-footer text-light bg-dark'>
-                        {JSON.stringify(props.conversor)}
+                        { props.conversor.quotes && props.conversor.quotes[Object.keys(props.conversor.quotes)[0]]}
                     </div>
                 </div>
             </div>
