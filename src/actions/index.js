@@ -1,4 +1,4 @@
-import API_KEY from './../currency-api-key'
+import {API_KEY} from './../currency-api-key'
 import axios from 'axios'
 
 const BASE_URL = 'http://apilayer.net/api/'
