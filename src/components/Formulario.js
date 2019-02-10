@@ -12,12 +12,12 @@ const Formulario = props => {
             <div className='row form-group'>
                 <div className='col-md-6'>
                     <label htmlFor='formSelectDE'>De:</label>
-                    <ListaMoedas origem='de' />
+                    <ListaMoedas />
                 </div>
 
                 <div className='col-md-6'>
                     <label htmlFor='formSelectPARA'>Para:</label>
-                    <ListaMoedas origem='para' />
+                    <ListaMoedas />
                 </div>
             </div>
             <div className='row'>
